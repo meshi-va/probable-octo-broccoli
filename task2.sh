@@ -83,7 +83,7 @@ done
 
 # ----------- Evironment Validation -----------
 
-# Checks if Lucid is running #check if it's possible to do a health check via API
+# Checks if Lucid is running
 ps -fC Lucid > /dev/null || { echo "Error: Lucid isn't running" ; exit 1; }
 
 # Checks if jq is installed 
