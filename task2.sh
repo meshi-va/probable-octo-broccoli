@@ -92,7 +92,7 @@ which jq > /dev/null || { echo "jq is not installed. Please install it." ; exit 
 # If no argument is provided, the script exits
 [[ $1 == "" ]] && { echo "Error: The source is not specified. Please use [-h] for help." ; exit 1; }
 
-# Queries? the mount point and if the mount point is "null", shows an error, then exits
+# Queries the mount point and if the mount point is "null", shows an error, then exits
 mount_point=$(app_status | jq -r .mountPoint) && [[ $mount_point == "null" ]] && { echo "Error: Your filespace isn't linked" ; exit 1; }
 
 # ----------- Useful info -----------
